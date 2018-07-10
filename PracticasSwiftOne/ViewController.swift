@@ -31,9 +31,12 @@ class ViewController: UIViewController {
         let v2 = UIView(frame: v1.bounds.insetBy(dx:10, dy:10))
         v2.backgroundColor = UIColor(red:0.5,green:1, blue:0,alpha:1)
         self.view.addSubview(v1)
+        //v1.addSubview(v2)
+        //v1.bounds.origin.x += 10
+        //v1.bounds.origin.y += 10
         v1.addSubview(v2)
-        v1.bounds.origin.x += 10
-        v1.bounds.origin.y += 10
+        v1.transform = CGAffineTransform(rotationAngle: 45 * .pi/180)
+        print(v1.frame)
 
 
         
